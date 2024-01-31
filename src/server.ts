@@ -3,6 +3,9 @@ import path from 'path';
 import dotenv from 'dotenv';
 
 
+import apiRoutes from "./routes/api";
+
+
 //configurar de acordo com arquivo .env
 dotenv.config();
 
@@ -13,6 +16,10 @@ const server = express();
 server.use(express.static(path.join(__dirname,'../public')));
 //para pegar envio via post
 server.use(express.urlencoded({extended: true}));
+
+//chama o arquivo de rotas da api com um prefixo antes /api
+server.use('/api',apiRoutes);
+
 
 //para ir para rota da pagina não encontrada famoso 404
 server.use((req:Request ,res:Response)=>{
