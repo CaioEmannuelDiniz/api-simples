@@ -2,6 +2,7 @@ import express, {Request, Response} from "express";
 import path from 'path';
 import dotenv from 'dotenv';
 
+import cors from 'cors';
 
 import apiRoutes from "./routes/api";
 
@@ -11,6 +12,9 @@ dotenv.config();
 
 //atribuindo a constante server ao express
 const server = express();
+
+//atribuir o cors ao servidor
+server.use(cors());
 
 //para pegar o endereço da pasta estatica
 server.use(express.static(path.join(__dirname,'../public')));

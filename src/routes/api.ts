@@ -1,23 +1,17 @@
 import {Router} from 'express';
 
+import * as apiController from '../controllers/apiController'
+
 const router = Router();
 
 //rota padrao para testar a api
-router.get('/ping',(req,res)=>{
-    res.json({pong: true});
-});
+router.get('/ping',apiController.ping);
 
 //rota que gera um numero aleatorio
-router.get('/random',(req,res)=>{
-    let nRand: number = Math.floor(Math.random()*10);
+router.get('/random',apiController.random);
 
-    res.json({JSON: nRand});
-});
-
-router.get('/nome/:nome',(req,res)=>{
-    let nome:string = req.params.nome;
-    res.json({nome:`Você enviou o nome: ${nome}`});
-});
+//rota que gera uma frase com o nome informado
+router.get('/nome/:nome',apiController.nome);
 
 
 
