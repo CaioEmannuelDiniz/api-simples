@@ -13,6 +13,6 @@ router.get('/random',apiController.random);
 //rota que gera uma frase com o nome informado
 router.get('/nome/:nome',apiController.nome);
 
-
+router.post('/frases',apiController.createPhrase);
 
 export default router;

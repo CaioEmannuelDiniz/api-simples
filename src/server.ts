@@ -18,6 +18,7 @@ server.use(cors());
 
 //para pegar o endereço da pasta estatica
 server.use(express.static(path.join(__dirname,'../public')));
+
 //para pegar envio via post
 server.use(express.urlencoded({extended: true}));
 
