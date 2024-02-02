@@ -4,4 +4,4 @@ CRUD PARA frases
 ->GET: /frases       - Listar todas as frases(R-read all) (OK)
 ->GET: /frase/123    - Pegar informação de uma frase (R-read one) (OK)
 ->PUT: /frase/123    - Atualizar informação de uma frase(U-update) (OK)
-->DELETE: /frase/123 - Deletar uma frase(D-delete) 
+->DELETE: /frase/123 - Deletar uma frase(D-delete) (OK)

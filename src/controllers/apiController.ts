@@ -54,7 +54,7 @@ export const updatePhrase = async (req: Request,res:Response)=>{
     if(phrase){
 
         phrase.author = author;
-        
+
         phrase.txt = txt;
 
         await phrase.save();
@@ -67,4 +67,14 @@ export const updatePhrase = async (req: Request,res:Response)=>{
         res.json({ error: 'Frase não encontrada'});
 
     }
+};
+
+export const deletePhrase = async(req:Request, res:Response)=>{
+
+    let {id} = req.params;
+
+    await Phrase.destroy({where:{id}})
+
+    res.json({message:`O id ${id} foi deletado`});
+
 };
