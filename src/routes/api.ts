@@ -16,5 +16,6 @@ router.get('/nome/:nome',apiController.nome);
 router.post('/frases',apiController.createPhrase);
 router.get('/frases',apiController.listPhrases);
 router.get('/frase/:id',apiController.getPhrase);
+router.put('/frase/:id', apiController.updatePhrase);
 
 export default router;
