@@ -5,3 +5,7 @@ CRUD PARA frases
 ->GET: /frase/123    - Pegar informação de uma frase (R-read one) (OK)
 ->PUT: /frase/123    - Atualizar informação de uma frase(U-update) (OK)
 ->DELETE: /frase/123 - Deletar uma frase(D-delete) (OK)
+
+BÔNUS-EXTRA
+
+->GET: /frase/aleatoria  - Ordena e mostra uma frase aleatoria(R-read) (OK)
